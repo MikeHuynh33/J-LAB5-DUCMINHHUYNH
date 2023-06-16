@@ -1,5 +1,5 @@
 {
-  "name": "week1",
+  "name": "J-Lab-5",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,9 +11,7 @@
   "dependencies": {
     "dotenv": "^16.1.4",
     "express": "^4.18.2",
+    "jsdom": "^22.1.0",
     "pug": "^3.0.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.22"
   }
 }

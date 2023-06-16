@@ -11,10 +11,12 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // set up .env
-require("dotenv").config();
-app.get("/", (req, res) => {
-  res.render("index", { title: "Home" });
-});
 
+require("dotenv").config();
+const {GetDocuments , GetPlaceMark} = require("./modules/libraryXML_handler");
+app.get("/", async (req, res) => {
+  let data = await GetPlaceMark();
+  res.render("index", { title: "Home", data: data });
+});
 app.listen(process.env.port || 8080);
 console.log("Running at Port 3000");

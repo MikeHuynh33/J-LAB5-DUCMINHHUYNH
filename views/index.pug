@@ -4,9 +4,9 @@ block header-content
     h1 Welcome to my homepage
 
 block main-content
-    h1 This body of homepage 
-    p insert whatever u want
-
+    each place in data
+        -let address = place.querySelector("address").contentText;
+        div #{address} 
 block footer-content 
     h1 This footer of homepage 
     p insert whatever u want
